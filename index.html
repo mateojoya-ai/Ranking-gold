@@ -8,16 +8,17 @@
 <style>
 body {
   margin: 0;
-  font-family: Arial;
-  background: radial-gradient(circle, #0b1220, #020617);
+  font-family: 'Segoe UI', sans-serif;
+  background: radial-gradient(circle at top, #0b1220, #020617);
   color: white;
 }
 
 /* TITULO */
-h1 {
+.titulo {
   text-align: center;
+  font-size: 30px;
+  font-weight: bold;
   margin-top: 20px;
-  font-size: 28px;
 }
 
 /* BOTON */
@@ -25,30 +26,47 @@ h1 {
   display: block;
   width: 90%;
   margin: 15px auto;
-  background: linear-gradient(90deg, #22c55e, #16a34a);
   padding: 14px;
   border-radius: 12px;
   text-align: center;
   font-weight: bold;
-  color: white;
   text-decoration: none;
+  color: white;
+  background: linear-gradient(90deg,#22c55e,#16a34a);
+  box-shadow: 0 0 10px #22c55e;
+  transition: 0.3s;
+}
+.boton:hover {
+  transform: scale(1.03);
 }
 
-/* PRIMERO */
+/* TOP 1 */
 .primero {
   margin: 20px;
-  padding: 20px;
+  padding: 25px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #000, #111);
-  border: 2px solid gold;
   text-align: center;
-  box-shadow: 0 0 20px gold;
+  background: linear-gradient(135deg,#000,#111);
+  border: 2px solid gold;
+  box-shadow: 0 0 25px gold;
+  animation: glow 2s infinite alternate;
 }
 
-/* TOP */
+@keyframes glow {
+  from { box-shadow: 0 0 10px gold; }
+  to { box-shadow: 0 0 30px gold; }
+}
+
+.primero h1 {
+  font-size: 40px;
+  margin: 10px 0;
+  color: gold;
+}
+
+/* TOP 2-9 */
 .top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4,1fr);
   gap: 10px;
   padding: 10px;
 }
@@ -56,9 +74,14 @@ h1 {
 .card {
   background: #020617;
   border: 1px solid #334155;
-  border-radius: 10px;
-  padding: 10px;
+  border-radius: 12px;
+  padding: 12px;
   text-align: center;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+  border-color: gold;
 }
 
 /* TABLA */
@@ -72,70 +95,105 @@ h1 {
 .columna {
   background: #020617;
   border: 1px solid #334155;
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 10px;
 }
 
 .item {
   display: flex;
   justify-content: space-between;
-  padding: 5px 0;
+  padding: 6px 0;
   border-bottom: 1px solid #1e293b;
   font-size: 14px;
+  transition: 0.2s;
+}
+.item:hover {
+  background: #111827;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🏆 RANKING TRUCO GOLD</h1>
+<div class="titulo">🏆 RANKING TRUCO <span style="color:gold;">GOLD</span> 🃏</div>
 
 <a class="boton" href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t">
 👉 UNITE AL GRUPO
 </a>
 
 <div class="primero">
-<h2>🥇 PLE Dylan😉🤙</h2>
-<h1>130 pts</h1>
+<h2>👑 1° PLE Dylan😉🤙</h2>
+<h1>🏆 130 pts</h1>
 </div>
 
 <div class="top">
-<div class="card">2° ~CBraianj<br>119</div>
-<div class="card">3° joaco Farias<br>93</div>
-<div class="card">4° PLE Edu<br>57</div>
-<div class="card">5° ~Benja<br>51</div>
-<div class="card">6° PLE bauti<br>46</div>
-<div class="card">7° PLE Enzoo<br>43</div>
-<div class="card">8° CLT Nacho<br>37</div>
-<div class="card">9° ~Luis Carrizo<br>31</div>
+<div class="card">🥈 2°<br>~CBraianj<br>119 pts</div>
+<div class="card">🥉 3°<br>joaco Farias<br>93 pts</div>
+<div class="card">4°<br>PLE Edu<br>57 pts</div>
+<div class="card">5°<br>~Benja<br>51 pts</div>
+<div class="card">6°<br>PLE bauti<br>46 pts</div>
+<div class="card">7°<br>PLE Enzoo<br>43 pts</div>
+<div class="card">8°<br>CLT Nacho<br>37 pts</div>
+<div class="card">9°<br>~Luis Carrizo<br>31 pts</div>
 </div>
 
 <div class="tabla">
 
 <div class="columna">
-<div class="item"><span>10 PLE Lauty B</span><span>29</span></div>
-<div class="item"><span>11 ~thiago</span><span>28</span></div>
-<div class="item"><span>12 ~Fran Ibañez</span><span>27</span></div>
-<div class="item"><span>13 ~Martin</span><span>26</span></div>
-<div class="item"><span>14 Lichu Lafe</span><span>25</span></div>
-<div class="item"><span>15 ~Beenja</span><span>25</span></div>
-<div class="item"><span>16 PLE.Mario</span><span>23</span></div>
-<div class="item"><span>17 PLE ig</span><span>20</span></div>
-<div class="item"><span>18 PLE Exequiel</span><span>18</span></div>
-<div class="item"><span>19 yoel admin</span><span>16</span></div>
+<div class="item"><span>10° PLE Lauty B</span><span>29</span></div>
+<div class="item"><span>11° ~thiago</span><span>28</span></div>
+<div class="item"><span>12° ~Fran Ibañez</span><span>27</span></div>
+<div class="item"><span>13° ~Martin 🍺</span><span>26</span></div>
+<div class="item"><span>14° Lichu Lafe</span><span>25</span></div>
+<div class="item"><span>15° ~Beenja</span><span>25</span></div>
+<div class="item"><span>16° PLE.Mario</span><span>23</span></div>
+<div class="item"><span>17° PLE ig</span><span>20</span></div>
+<div class="item"><span>18° PLE Exequiel Leandro Bazan</span><span>18</span></div>
+<div class="item"><span>19° yoel admin gold</span><span>16</span></div>
+<div class="item"><span>20° ~Juann</span><span>16</span></div>
+<div class="item"><span>21° CLT yoel</span><span>13</span></div>
+<div class="item"><span>22° PLE Nata</span><span>12</span></div>
+<div class="item"><span>23° Sss</span><span>12</span></div>
+<div class="item"><span>24° PLE pablo</span><span>11</span></div>
+<div class="item"><span>25° ~Rodrigo Javier</span><span>11</span></div>
+<div class="item"><span>26° CLT lean</span><span>10</span></div>
+<div class="item"><span>27° PLE Kevin Joel Asman</span><span>10</span></div>
+<div class="item"><span>28° CLT Lau</span><span>9</span></div>
+<div class="item"><span>29° PLE Dedo</span><span>9</span></div>
+<div class="item"><span>30° PLE mario g</span><span>9</span></div>
 </div>
 
 <div class="columna">
-<div class="item"><span>41 PLE Juan</span><span>6</span></div>
-<div class="item"><span>42 ~AnaSalas</span><span>6</span></div>
-<div class="item"><span>43 ~Lucas</span><span>6</span></div>
-<div class="item"><span>44 PLE Sergio</span><span>5</span></div>
-<div class="item"><span>45 Ángel Canales</span><span>5</span></div>
-<div class="item"><span>46 GOLD bauti</span><span>4</span></div>
-<div class="item"><span>47 PLE martaa</span><span>4</span></div>
-<div class="item"><span>48 ~Bauty</span><span>4</span></div>
-<div class="item"><span>49 ~Nico</span><span>4</span></div>
-<div class="item"><span>50 ~elcoco23</span><span>3</span></div>
+<div class="item"><span>41° PLE Juan</span><span>6</span></div>
+<div class="item"><span>42° ~AnaSalas</span><span>6</span></div>
+<div class="item"><span>43° ~Lucas vizcarra</span><span>6</span></div>
+<div class="item"><span>44° PLE Sergio</span><span>5</span></div>
+<div class="item"><span>45° PLE Ángel Canales</span><span>5</span></div>
+<div class="item"><span>46° GOLD bauti</span><span>4</span></div>
+<div class="item"><span>47° PLE martaa</span><span>4</span></div>
+<div class="item"><span>48° ~Bauty</span><span>4</span></div>
+<div class="item"><span>49° ~Nico</span><span>4</span></div>
+<div class="item"><span>50° ~elcoco23</span><span>3</span></div>
+<div class="item"><span>51° Admin</span><span>2</span></div>
+<div class="item"><span>52° CLT Josecito</span><span>2</span></div>
+<div class="item"><span>53° PLE A.M</span><span>2</span></div>
+<div class="item"><span>54° PLE Jere Lagos</span><span>2</span></div>
+<div class="item"><span>55° PLE emi</span><span>2</span></div>
+<div class="item"><span>56° nahuel admin gold</span><span>2</span></div>
+<div class="item"><span>57° ~Brian💰</span><span>2</span></div>
+<div class="item"><span>58° ~Juanca</span><span>2</span></div>
+<div class="item"><span>59° ~Nicolás</span><span>2</span></div>
+<div class="item"><span>60° ~…</span><span>2</span></div>
+<div class="item"><span>61° CLT El Terre 😎</span><span>1</span></div>
+<div class="item"><span>62° Joya Mateo</span><span>1</span></div>
+<div class="item"><span>63° PLE Gabriel</span><span>1</span></div>
+<div class="item"><span>64° PLE Lautyy</span><span>1</span></div>
+<div class="item"><span>65° PLE Santino</span><span>1</span></div>
+<div class="item"><span>66° PLE Vivir Solo Cuesta Vida</span><span>1</span></div>
+<div class="item"><span>67° Piki Admin</span><span>1</span></div>
+<div class="item"><span>68° pablo Admin 4</span><span>1</span></div>
+<div class="item"><span>69° ~agustin tamburini</span><span>1</span></div>
+<div class="item"><span>70° ~santii</span><span>1</span></div>
 </div>
 
 </div>
