@@ -1,120 +1,101 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ranking Truco Gold</title>
+<div style="font-family: 'Segoe UI', sans-serif; background:#0a0a0a; color:white; padding:25px; text-align:center;">
 
-<style>
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(#0a0f2c, #020617);
-  color: white;
-  text-align: center;
-}
+  <style>
+    .glow-gold {
+      color:#ffae00;
+      text-shadow:0 0 10px #ffae00, 0 0 20px #ff6a00;
+    }
+    .box {
+      border-radius:15px;
+      padding:15px;
+      transition:0.3s;
+    }
+    .box:hover {
+      transform:scale(1.05);
+      box-shadow:0 0 20px rgba(255,255,255,0.3);
+    }
+    .btn {
+      display:inline-block;
+      margin:20px;
+      padding:15px 35px;
+      background:#25D366;
+      color:white;
+      font-weight:bold;
+      border-radius:12px;
+      text-decoration:none;
+      box-shadow:0 0 15px #25D366;
+      transition:0.3s;
+    }
+    .btn:hover {
+      transform:scale(1.08);
+      box-shadow:0 0 25px #25D366;
+    }
+    .winner {
+      border:2px solid #ffae00;
+      border-radius:20px;
+      padding:25px;
+      margin:25px auto;
+      max-width:500px;
+      box-shadow:0 0 25px #ffae00;
+      background:linear-gradient(145deg,#1a1a1a,#000);
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(130px,1fr));
+      gap:12px;
+      margin-top:20px;
+    }
+  </style>
 
-h1 {
-  margin-top: 20px;
-  font-size: 28px;
-}
+  <h1 class="glow-gold" style="font-size:38px;">
+    🔥 BIENVENIDO A TRUCO GOLD 🔥
+  </h1>
 
-.boton {
-  display: block;
-  margin: 20px auto;
-  background: #25D366;
-  color: white;
-  padding: 15px;
-  width: 90%;
-  max-width: 400px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  box-shadow: 0 0 10px #25D366;
-}
+  <a href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t" target="_blank" class="btn">
+    🟢 UNITE AL GRUPO
+  </a>
 
-.primero {
-  border: 3px solid gold;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  background: radial-gradient(circle, #111827, #020617);
-  box-shadow: 0 0 25px gold;
-  animation: glow 2s infinite alternate;
-}
+  <h2 class="glow-gold">🏆 RANKING SEMANAL 🏆</h2>
 
-@keyframes glow {
-  from { box-shadow: 0 0 10px gold; }
-  to { box-shadow: 0 0 30px gold; }
-}
+  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin:20px 0;">
+    
+    <div class="box" style="border:2px solid #ffae00;">
+      🥇 CAMPEÓN<br><b>$20.000</b>
+    </div>
 
-.top9 {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+    <div class="box" style="border:2px solid #ffae00;">
+      🥈 2° AL 9°<br>TORNEO POR<br><b>$10.000</b>
+    </div>
 
-.card {
-  border: 1px solid #3b82f6;
-  margin: 8px;
-  padding: 10px;
-  border-radius: 10px;
-  width: 110px;
-  background: #111827;
-}
+    <div class="box" style="border:2px solid #00c3ff;">
+      🔄 SE REINICIA<br><b>TODOS LOS DOMINGOS</b>
+    </div>
 
-.tabla {
-  margin-top: 20px;
-  padding: 10px;
-}
+  </div>
 
-.fila {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px solid #333;
-  padding: 6px;
-}
-</style>
-</head>
+  <div class="winner">
+    <h2 style="font-size:45px; margin:0;">👑 1°</h2>
+    <h3 style="font-size:28px;">PLE Dylan 😉🤘</h3>
+    <p style="font-size:22px;">⭐ 130 pts</p>
+  </div>
 
-<body>
+  <h3 class="glow-gold">⭐ TOP 2 - 9 ⭐</h3>
 
-<h1>🏆 RANKING TRUCO GOLD 🃏</h1>
+  <div class="grid">
 
-<a class="boton" href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t">
-👉 UNITE AL GRUPO
-</a>
+    <div class="box" style="background:#2a2a2a;">2°<br>~CBraianj<br><b>119</b></div>
+    <div class="box" style="background:#ff6a00;">3°<br>joaco Farias<br><b>93</b></div>
+    <div class="box" style="background:#0044ff;">4°<br>PLE Edu<br><b>57</b></div>
+    <div class="box" style="background:#a000ff;">5°<br>~Benja 😢<br><b>51</b></div>
+    <div class="box" style="background:#00c853;">6°<br>PLE bauti 🥰<br><b>46</b></div>
+    <div class="box" style="background:#d50000;">7°<br>PLE Enzoo<br><b>43</b></div>
+    <div class="box" style="background:#00bcd4;">8°<br>CLT Nacho<br><b>37</b></div>
+    <div class="box" style="background:#ffae00; color:black;">9°<br>~Luis Carrizo<br><b>31</b></div>
 
-<div class="primero">
-🥇 PLE Dylan😉🤙 - 130 pts
-</div>
+  </div>
 
-<div class="top9">
-<div class="card">2° ~CBraianj - 119</div>
-<div class="card">3° joaco Farias - 93</div>
-<div class="card">4° PLE Edu - 57</div>
-<div class="card">5° ~Benja🫣 - 51</div>
-<div class="card">6° PLE 🥰🥰bauti - 46</div>
-<div class="card">7° PLE Enzoo - 43</div>
-<div class="card">8° CLT Nacho - 37</div>
-<div class="card">9° ~Luis Carrizo💯 - 31</div>
-</div>
-
-<div class="tabla">
-
-<div class="fila"><span>10° PLE Lauty B</span><span>29</span></div>
-<div class="fila"><span>11° ~thiago</span><span>28</span></div>
-<div class="fila"><span>12° ~Fran Ibañez</span><span>27</span></div>
-<div class="fila"><span>13° ~Martin 🍺</span><span>26</span></div>
-<div class="fila"><span>14° Lichu Lafe</span><span>25</span></div>
-<div class="fila"><span>15° ~Beenja</span><span>25</span></div>
-<div class="fila"><span>16° PLE.Mario</span><span>23</span></div>
-<div class="fila"><span>17° PLE ig</span><span>20</span></div>
-<div class="fila"><span>18° PLE Exequiel Leandro Bazan</span><span>18</span></div>
-<div class="fila"><span>19° yoel admin gold</span><span>16</span></div>
-<div class="fila"><span>20° ~Juann</span><span>16</span></div>
+  <p style="margin-top:25px; opacity:0.6;">
+    ⏱ ÚLTIMA ACTUALIZACIÓN: Ahora mismo
+  </p>
 
 </div>
-
-</body>
-</html>
