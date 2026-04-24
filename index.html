@@ -2,74 +2,194 @@
 <html>
 <head>
   <title>Ranking Truco Gold</title>
+
   <style>
     body {
-      font-family: Arial;
-      background: #0f172a;
+      background: #020617;
       color: white;
+      font-family: Arial;
       text-align: center;
     }
 
-    h1 {
+    .container {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    textarea {
+      width: 90%;
+      height: 200px;
       margin-top: 20px;
+      border-radius: 10px;
+      padding: 10px;
+    }
+
+    .top1 {
+      border: 3px solid gold;
+      padding: 20px;
+      margin: 20px;
+      border-radius: 20px;
+      font-size: 22px;
+    }
+
+    .top9 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .top9 div {
+      border: 1px solid #444;
+      padding: 10px;
+      border-radius: 10px;
+      width: 120px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+      border-collapse: collapse;
+    }
+
+    td {
+      padding: 8px;
+      border-bottom: 1px solid #333;
     }
 
     .whatsapp {
       background: #25D366;
-      padding: 15px;
+      padding: 12px;
+      border-radius: 10px;
       margin: 20px;
-      border-radius: 15px;
-      font-weight: bold;
     }
 
-    .whatsapp a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-      display: block;
-    }
-
-    .card {
-      background: #1e293b;
-      margin: 15px auto;
-      padding: 20px;
-      width: 300px;
-      border-radius: 15px;
-    }
-
-    .gold { border: 3px solid gold; }
-    .silver { border: 3px solid silver; }
-    .bronze { border: 3px solid #cd7f32; }
+    a { color: white; text-decoration: none; }
   </style>
 </head>
 
 <body>
 
+<div class="container">
+
 <h1>🏆 RANKING TRUCO GOLD</h1>
 
 <div class="whatsapp">
-  <a href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t">
-    👉 UNITE AL GRUPO
-  </a>
+<a href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t">
+👉 UNITE AL GRUPO
+</a>
 </div>
 
-<div class="card gold">
-  <h2>🥇 1°</h2>
-  <h3>Jugador 1</h3>
-  <p>100 pts</p>
+<textarea id="input">
+PLE Dylan😉🤙 - 130
+~CBraianj - 119
+joaco Farias - 93
+PLE Edu - 57
+~Benja🫣 - 51
+PLE 🥰🥰bauti - 46
+PLE Enzoo - 43
+CLT Nacho - 37
+~Luis Carrizo💯 - 31
+PLE Lauty B - 29
+~thiago - 28
+~Fran Ibañez - 27
+~Martin 🍺 - 26
+Lichu Lafe - 25
+~Beenja - 25
+PLE.Mario - 23
+PLE ig - 20
+PLE Exequiel Leandro Bazan - 18
+~Juann - 16
+CLT yoel - 13
+PLE Nata - 12
+Sss - 12
+PLE pablo - 11
+~Rodrigo Javier - 11
+CLT lean - 10
+PLE Kevin Joel Asman - 10
+CLT Lau - 9
+PLE Dedo - 9
+PLE mario g - 9
+~valenzuela⚽️ - 9
+GOLD THE BIGBOSS - 8
+PLE Jonasss - 8
+PLE Mati - 8
+PLE facurizzii🍀 - 7
+~😁 - 7
+PLE Ciro Pasqualini - 6
+PLE Juan - 6
+~AnaSalas - 6
+~Lucas vizcarra - 6
+PLE Sergio - 5
+PLE Ángel Canales - 5
+GOLD bauti - 4
+PLE martaa - 4
+~Bauty - 4
+~Nico - 4
+~elcoco23 - 3
+CLT Josecito - 2
+PLE A.M - 2
+PLE Jere Lagos - 2
+PLE emi - 2
+~Brian💰 - 2
+~Juanca - 2
+~Nicolás - 2
+CLT El Terre 😎 - 1
+PLE Gabriel - 1
+PLE Lautyy - 1
+PLE Santino - 1
+PLE Vivir Solo Cuesta Vida - 1
+~agustin tamburini - 1
+~santii - 1
+</textarea>
+
+<br><br>
+<button onclick="generar()">Actualizar ranking</button>
+
+<div id="top1"></div>
+<div class="top9" id="top9"></div>
+<table id="tabla"></table>
+
 </div>
 
-<div class="card silver">
-  <h2>🥈 2°</h2>
-  <h3>Jugador 2</h3>
-  <p>90 pts</p>
-</div>
+<script>
+function generar(){
 
-<div class="card bronze">
-  <h2>🥉 3°</h2>
-  <h3>Jugador 3</h3>
-  <p>80 pts</p>
-</div>
+let texto = document.getElementById("input").value.split("\n");
+
+let jugadores = texto.map(linea => {
+let partes = linea.split("-");
+return {
+nombre: partes[0]?.trim(),
+puntos: parseInt(partes[1])
+};
+}).filter(j => j.nombre && j.puntos);
+
+jugadores.sort((a,b)=>b.puntos-a.puntos);
+
+// limpiar
+document.getElementById("top1").innerHTML="";
+document.getElementById("top9").innerHTML="";
+document.getElementById("tabla").innerHTML="";
+
+// TOP 1
+document.getElementById("top1").innerHTML =
+`<div class="top1">🥇 ${jugadores[0].nombre} - ${jugadores[0].puntos} pts</div>`;
+
+// TOP 2–9
+for(let i=1;i<9 && i<jugadores.length;i++){
+document.getElementById("top9").innerHTML +=
+`<div>${i+1}°<br>${jugadores[i].nombre}<br>${jugadores[i].puntos}</div>`;
+}
+
+// RESTO
+for(let i=9;i<jugadores.length;i++){
+document.getElementById("tabla").innerHTML +=
+`<tr><td>${i+1}</td><td>${jugadores[i].nombre}</td><td>${jugadores[i].puntos}</td></tr>`;
+}
+
+}
+</script>
 
 </body>
 </html>
