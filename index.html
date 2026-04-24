@@ -8,46 +8,37 @@
 <style>
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: radial-gradient(circle at top, #0b1220, #020617);
+  font-family: Arial, sans-serif;
+  background: linear-gradient(#0a0f2c, #020617);
   color: white;
-}
-
-/* TITULO */
-.titulo {
   text-align: center;
-  font-size: 30px;
-  font-weight: bold;
-  margin-top: 20px;
 }
 
-/* BOTON */
+h1 {
+  margin-top: 20px;
+  font-size: 28px;
+}
+
 .boton {
   display: block;
-  width: 90%;
-  margin: 15px auto;
-  padding: 14px;
-  border-radius: 12px;
-  text-align: center;
-  font-weight: bold;
-  text-decoration: none;
+  margin: 20px auto;
+  background: #25D366;
   color: white;
-  background: linear-gradient(90deg,#22c55e,#16a34a);
-  box-shadow: 0 0 10px #22c55e;
-  transition: 0.3s;
-}
-.boton:hover {
-  transform: scale(1.03);
+  padding: 15px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 0 10px #25D366;
 }
 
-/* TOP 1 */
 .primero {
+  border: 3px solid gold;
   margin: 20px;
-  padding: 25px;
-  border-radius: 20px;
-  text-align: center;
-  background: linear-gradient(135deg,#000,#111);
-  border: 2px solid gold;
+  padding: 20px;
+  border-radius: 15px;
+  background: radial-gradient(circle, #111827, #020617);
   box-shadow: 0 0 25px gold;
   animation: glow 2s infinite alternate;
 }
@@ -57,144 +48,71 @@ body {
   to { box-shadow: 0 0 30px gold; }
 }
 
-.primero h1 {
-  font-size: 40px;
-  margin: 10px 0;
-  color: gold;
-}
-
-/* TOP 2-9 */
-.top {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 10px;
-  padding: 10px;
+.top9 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card {
-  background: #020617;
-  border: 1px solid #334155;
-  border-radius: 12px;
-  padding: 12px;
-  text-align: center;
-  transition: 0.3s;
-}
-.card:hover {
-  transform: scale(1.05);
-  border-color: gold;
+  border: 1px solid #3b82f6;
+  margin: 8px;
+  padding: 10px;
+  border-radius: 10px;
+  width: 110px;
+  background: #111827;
 }
 
-/* TABLA */
 .tabla {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  margin-top: 20px;
   padding: 10px;
 }
 
-.columna {
-  background: #020617;
-  border: 1px solid #334155;
-  border-radius: 12px;
-  padding: 10px;
-}
-
-.item {
+.fila {
   display: flex;
   justify-content: space-between;
-  padding: 6px 0;
-  border-bottom: 1px solid #1e293b;
-  font-size: 14px;
-  transition: 0.2s;
-}
-.item:hover {
-  background: #111827;
+  border-bottom: 1px solid #333;
+  padding: 6px;
 }
 </style>
 </head>
 
 <body>
 
-<div class="titulo">🏆 RANKING TRUCO <span style="color:gold;">GOLD</span> 🃏</div>
+<h1>🏆 RANKING TRUCO GOLD 🃏</h1>
 
 <a class="boton" href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t">
 👉 UNITE AL GRUPO
 </a>
 
 <div class="primero">
-<h2>👑 1° PLE Dylan😉🤙</h2>
-<h1>🏆 130 pts</h1>
+🥇 PLE Dylan😉🤙 - 130 pts
 </div>
 
-<div class="top">
-<div class="card">🥈 2°<br>~CBraianj<br>119 pts</div>
-<div class="card">🥉 3°<br>joaco Farias<br>93 pts</div>
-<div class="card">4°<br>PLE Edu<br>57 pts</div>
-<div class="card">5°<br>~Benja<br>51 pts</div>
-<div class="card">6°<br>PLE bauti<br>46 pts</div>
-<div class="card">7°<br>PLE Enzoo<br>43 pts</div>
-<div class="card">8°<br>CLT Nacho<br>37 pts</div>
-<div class="card">9°<br>~Luis Carrizo<br>31 pts</div>
+<div class="top9">
+<div class="card">2° ~CBraianj - 119</div>
+<div class="card">3° joaco Farias - 93</div>
+<div class="card">4° PLE Edu - 57</div>
+<div class="card">5° ~Benja🫣 - 51</div>
+<div class="card">6° PLE 🥰🥰bauti - 46</div>
+<div class="card">7° PLE Enzoo - 43</div>
+<div class="card">8° CLT Nacho - 37</div>
+<div class="card">9° ~Luis Carrizo💯 - 31</div>
 </div>
 
 <div class="tabla">
 
-<div class="columna">
-<div class="item"><span>10° PLE Lauty B</span><span>29</span></div>
-<div class="item"><span>11° ~thiago</span><span>28</span></div>
-<div class="item"><span>12° ~Fran Ibañez</span><span>27</span></div>
-<div class="item"><span>13° ~Martin 🍺</span><span>26</span></div>
-<div class="item"><span>14° Lichu Lafe</span><span>25</span></div>
-<div class="item"><span>15° ~Beenja</span><span>25</span></div>
-<div class="item"><span>16° PLE.Mario</span><span>23</span></div>
-<div class="item"><span>17° PLE ig</span><span>20</span></div>
-<div class="item"><span>18° PLE Exequiel Leandro Bazan</span><span>18</span></div>
-<div class="item"><span>19° yoel admin gold</span><span>16</span></div>
-<div class="item"><span>20° ~Juann</span><span>16</span></div>
-<div class="item"><span>21° CLT yoel</span><span>13</span></div>
-<div class="item"><span>22° PLE Nata</span><span>12</span></div>
-<div class="item"><span>23° Sss</span><span>12</span></div>
-<div class="item"><span>24° PLE pablo</span><span>11</span></div>
-<div class="item"><span>25° ~Rodrigo Javier</span><span>11</span></div>
-<div class="item"><span>26° CLT lean</span><span>10</span></div>
-<div class="item"><span>27° PLE Kevin Joel Asman</span><span>10</span></div>
-<div class="item"><span>28° CLT Lau</span><span>9</span></div>
-<div class="item"><span>29° PLE Dedo</span><span>9</span></div>
-<div class="item"><span>30° PLE mario g</span><span>9</span></div>
-</div>
-
-<div class="columna">
-<div class="item"><span>41° PLE Juan</span><span>6</span></div>
-<div class="item"><span>42° ~AnaSalas</span><span>6</span></div>
-<div class="item"><span>43° ~Lucas vizcarra</span><span>6</span></div>
-<div class="item"><span>44° PLE Sergio</span><span>5</span></div>
-<div class="item"><span>45° PLE Ángel Canales</span><span>5</span></div>
-<div class="item"><span>46° GOLD bauti</span><span>4</span></div>
-<div class="item"><span>47° PLE martaa</span><span>4</span></div>
-<div class="item"><span>48° ~Bauty</span><span>4</span></div>
-<div class="item"><span>49° ~Nico</span><span>4</span></div>
-<div class="item"><span>50° ~elcoco23</span><span>3</span></div>
-<div class="item"><span>51° Admin</span><span>2</span></div>
-<div class="item"><span>52° CLT Josecito</span><span>2</span></div>
-<div class="item"><span>53° PLE A.M</span><span>2</span></div>
-<div class="item"><span>54° PLE Jere Lagos</span><span>2</span></div>
-<div class="item"><span>55° PLE emi</span><span>2</span></div>
-<div class="item"><span>56° nahuel admin gold</span><span>2</span></div>
-<div class="item"><span>57° ~Brian💰</span><span>2</span></div>
-<div class="item"><span>58° ~Juanca</span><span>2</span></div>
-<div class="item"><span>59° ~Nicolás</span><span>2</span></div>
-<div class="item"><span>60° ~…</span><span>2</span></div>
-<div class="item"><span>61° CLT El Terre 😎</span><span>1</span></div>
-<div class="item"><span>62° Joya Mateo</span><span>1</span></div>
-<div class="item"><span>63° PLE Gabriel</span><span>1</span></div>
-<div class="item"><span>64° PLE Lautyy</span><span>1</span></div>
-<div class="item"><span>65° PLE Santino</span><span>1</span></div>
-<div class="item"><span>66° PLE Vivir Solo Cuesta Vida</span><span>1</span></div>
-<div class="item"><span>67° Piki Admin</span><span>1</span></div>
-<div class="item"><span>68° pablo Admin 4</span><span>1</span></div>
-<div class="item"><span>69° ~agustin tamburini</span><span>1</span></div>
-<div class="item"><span>70° ~santii</span><span>1</span></div>
-</div>
+<div class="fila"><span>10° PLE Lauty B</span><span>29</span></div>
+<div class="fila"><span>11° ~thiago</span><span>28</span></div>
+<div class="fila"><span>12° ~Fran Ibañez</span><span>27</span></div>
+<div class="fila"><span>13° ~Martin 🍺</span><span>26</span></div>
+<div class="fila"><span>14° Lichu Lafe</span><span>25</span></div>
+<div class="fila"><span>15° ~Beenja</span><span>25</span></div>
+<div class="fila"><span>16° PLE.Mario</span><span>23</span></div>
+<div class="fila"><span>17° PLE ig</span><span>20</span></div>
+<div class="fila"><span>18° PLE Exequiel Leandro Bazan</span><span>18</span></div>
+<div class="fila"><span>19° yoel admin gold</span><span>16</span></div>
+<div class="fila"><span>20° ~Juann</span><span>16</span></div>
 
 </div>
 
