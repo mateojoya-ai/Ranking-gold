@@ -14,7 +14,22 @@
     .container {
       max-width: 900px;
       margin: auto;
+      padding: 10px;
     }
+
+    h1 {
+      margin-top: 20px;
+    }
+
+    .whatsapp {
+      background: #25D366;
+      padding: 12px;
+      border-radius: 12px;
+      margin: 20px;
+      font-weight: bold;
+    }
+
+    a { color: white; text-decoration: none; }
 
     .top1 {
       border: 3px solid gold;
@@ -22,6 +37,7 @@
       margin: 20px;
       border-radius: 20px;
       font-size: 22px;
+      background: #0f172a;
     }
 
     .top9 {
@@ -32,10 +48,11 @@
     }
 
     .top9 div {
-      border: 1px solid #444;
+      background: #0f172a;
       padding: 10px;
       border-radius: 10px;
       width: 120px;
+      border: 1px solid #444;
     }
 
     table {
@@ -45,18 +62,19 @@
     }
 
     td {
-      padding: 8px;
+      padding: 10px;
       border-bottom: 1px solid #333;
     }
 
-    .whatsapp {
-      background: #25D366;
-      padding: 12px;
-      border-radius: 10px;
-      margin: 20px;
+    .pos {
+      color: #94a3b8;
+      width: 50px;
     }
 
-    a { color: white; text-decoration: none; }
+    .pts {
+      text-align: right;
+    }
+
   </style>
 </head>
 
@@ -101,6 +119,56 @@ PLE ig - 20
 PLE Exequiel Leandro Bazan - 18
 yoel admin gold - 16
 ~Juann - 16
+CLT yoel - 13
+PLE Nata - 12
+Sss - 12
+PLE pablo - 11
+~Rodrigo Javier - 11
+CLT lean - 10
+PLE Kevin Joel Asman - 10
+CLT Lau - 9
+PLE Dedo - 9
+PLE mario g - 9
+tomas gold - 9
+~valenzuela⚽️ - 9
+Benja Admin - 8
+GOLD THE BIGBOSS - 8
+PLE Jonasss - 8
+PLE Mati - 8
+Enzo Admin Gold - 7
+PLE facurizzii🍀 - 7
+~😁 - 7
+PLE Ciro Pasqualini - 6
+PLE Juan - 6
+~AnaSalas - 6
+~Lucas vizcarra - 6
+PLE Sergio - 5
+PLE Ángel Canales - 5
+GOLD bauti - 4
+PLE martaa - 4
+~Bauty - 4
+~Nico - 4
+~elcoco23 - 3
+Admin - 2
+CLT Josecito - 2
+PLE A.M - 2
+PLE Jere Lagos - 2
+PLE emi - 2
+nahuel admin gold - 2
+~Brian💰 - 2
+~Juanca - 2
+~Nicolás - 2
+~… - 2
+CLT El Terre 😎 - 1
+Joya Mateo - 1
+PLE Gabriel - 1
+PLE Lautyy - 1
+PLE Santino - 1
+PLE Vivir Solo Cuesta Vida - 1
+Piki Admin - 1
+pablo Admin 4 - 1
+~agustin tamburini - 1
+~santii - 1
 `;
 
 let jugadores = texto.split("\n").map(linea => {
@@ -126,7 +194,11 @@ document.getElementById("top9").innerHTML +=
 // RESTO
 for(let i=9;i<jugadores.length;i++){
 document.getElementById("tabla").innerHTML +=
-`<tr><td>${i+1}</td><td>${jugadores[i].nombre}</td><td>${jugadores[i].puntos}</td></tr>`;
+`<tr>
+<td class="pos">${i+1}</td>
+<td>${jugadores[i].nombre}</td>
+<td class="pts">${jugadores[i].puntos}</td>
+</tr>`;
 }
 
 </script>
