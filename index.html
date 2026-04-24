@@ -1,101 +1,176 @@
-<div style="font-family: 'Segoe UI', sans-serif; background:#0a0a0a; color:white; padding:25px; text-align:center;">
+<div style="font-family:'Segoe UI',sans-serif;background:#000; color:white; padding:20px; text-align:center; overflow:hidden;">
 
-  <style>
-    .glow-gold {
-      color:#ffae00;
-      text-shadow:0 0 10px #ffae00, 0 0 20px #ff6a00;
-    }
-    .box {
-      border-radius:15px;
-      padding:15px;
-      transition:0.3s;
-    }
-    .box:hover {
-      transform:scale(1.05);
-      box-shadow:0 0 20px rgba(255,255,255,0.3);
-    }
-    .btn {
-      display:inline-block;
-      margin:20px;
-      padding:15px 35px;
-      background:#25D366;
-      color:white;
-      font-weight:bold;
-      border-radius:12px;
-      text-decoration:none;
-      box-shadow:0 0 15px #25D366;
-      transition:0.3s;
-    }
-    .btn:hover {
-      transform:scale(1.08);
-      box-shadow:0 0 25px #25D366;
-    }
-    .winner {
-      border:2px solid #ffae00;
-      border-radius:20px;
-      padding:25px;
-      margin:25px auto;
-      max-width:500px;
-      box-shadow:0 0 25px #ffae00;
-      background:linear-gradient(145deg,#1a1a1a,#000);
-    }
-    .grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(130px,1fr));
-      gap:12px;
-      margin-top:20px;
-    }
-  </style>
+<style>
+body { margin:0; }
 
-  <h1 class="glow-gold" style="font-size:38px;">
-    🔥 BIENVENIDO A TRUCO GOLD 🔥
-  </h1>
+/* 🔥 FONDO ANIMADO */
+.fire-bg {
+  position:absolute;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: radial-gradient(circle at 50% 100%, #ff6a00, transparent 60%),
+              radial-gradient(circle at 20% 100%, #ff0000, transparent 60%),
+              radial-gradient(circle at 80% 100%, #ffae00, transparent 60%);
+  animation: fireMove 5s infinite alternate;
+  z-index:0;
+  opacity:0.4;
+}
+@keyframes fireMove {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
 
-  <a href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t" target="_blank" class="btn">
-    🟢 UNITE AL GRUPO
-  </a>
+/* CONTENIDO */
+.container { position:relative; z-index:2; }
 
-  <h2 class="glow-gold">🏆 RANKING SEMANAL 🏆</h2>
+/* GLOW */
+.glow {
+  color:#ffae00;
+  text-shadow:0 0 10px #ffae00, 0 0 20px #ff6a00, 0 0 40px #ff0000;
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { text-shadow:0 0 10px #ffae00; }
+  50% { text-shadow:0 0 30px #ff6a00,0 0 60px #ff0000; }
+  100% { text-shadow:0 0 10px #ffae00; }
+}
 
-  <div style="display:flex; justify-content:center; flex-wrap:wrap; gap:12px; margin:20px 0;">
-    
-    <div class="box" style="border:2px solid #ffae00;">
-      🥇 CAMPEÓN<br><b>$20.000</b>
-    </div>
+/* BOTON */
+.btn {
+  display:inline-block;
+  margin:20px;
+  padding:15px 35px;
+  background:#25D366;
+  color:white;
+  font-weight:bold;
+  border-radius:12px;
+  text-decoration:none;
+  box-shadow:0 0 20px #25D366;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+}
 
-    <div class="box" style="border:2px solid #ffae00;">
-      🥈 2° AL 9°<br>TORNEO POR<br><b>$10.000</b>
-    </div>
+/* GANADOR */
+.winner {
+  border:2px solid #ffae00;
+  border-radius:20px;
+  padding:25px;
+  margin:25px auto;
+  max-width:500px;
+  background:linear-gradient(145deg,#1a1a1a,#000);
+  box-shadow:0 0 30px #ff6a00;
+}
 
-    <div class="box" style="border:2px solid #00c3ff;">
-      🔄 SE REINICIA<br><b>TODOS LOS DOMINGOS</b>
-    </div>
+/* RANKING */
+.rank-list {
+  max-height:400px;
+  overflow-y:auto;
+  margin-top:20px;
+  text-align:left;
+  padding:10px;
+}
+.player {
+  padding:8px;
+  margin:5px 0;
+  border-radius:8px;
+  background:rgba(255,255,255,0.05);
+  transition:0.3s;
+}
+.player:hover {
+  background:rgba(255,174,0,0.3);
+  transform:scale(1.02);
+}
+</style>
 
-  </div>
+<div class="fire-bg"></div>
 
-  <div class="winner">
-    <h2 style="font-size:45px; margin:0;">👑 1°</h2>
-    <h3 style="font-size:28px;">PLE Dylan 😉🤘</h3>
-    <p style="font-size:22px;">⭐ 130 pts</p>
-  </div>
+<div class="container">
 
-  <h3 class="glow-gold">⭐ TOP 2 - 9 ⭐</h3>
+<h1 class="glow">🔥 BIENVENIDO A TRUCO GOLD 🔥</h1>
 
-  <div class="grid">
+<a href="https://chat.whatsapp.com/EcbHo1o9Rjv7YGV8s6zQi7?mode=gi_t" target="_blank" class="btn">
+🟢 UNITE AL GRUPO
+</a>
 
-    <div class="box" style="background:#2a2a2a;">2°<br>~CBraianj<br><b>119</b></div>
-    <div class="box" style="background:#ff6a00;">3°<br>joaco Farias<br><b>93</b></div>
-    <div class="box" style="background:#0044ff;">4°<br>PLE Edu<br><b>57</b></div>
-    <div class="box" style="background:#a000ff;">5°<br>~Benja 😢<br><b>51</b></div>
-    <div class="box" style="background:#00c853;">6°<br>PLE bauti 🥰<br><b>46</b></div>
-    <div class="box" style="background:#d50000;">7°<br>PLE Enzoo<br><b>43</b></div>
-    <div class="box" style="background:#00bcd4;">8°<br>CLT Nacho<br><b>37</b></div>
-    <div class="box" style="background:#ffae00; color:black;">9°<br>~Luis Carrizo<br><b>31</b></div>
+<h2 class="glow">🏆 RANKING SEMANAL 🏆</h2>
 
-  </div>
+<div class="winner">
+<h2>👑 1°</h2>
+<h3>PLE Dylan😉🤙</h3>
+<p>⭐ 130 pts</p>
+</div>
 
-  <p style="margin-top:25px; opacity:0.6;">
-    ⏱ ÚLTIMA ACTUALIZACIÓN: Ahora mismo
-  </p>
+<h3 class="glow">🔥 TODOS LOS JUGADORES 🔥</h3>
 
+<div class="rank-list">
+
+<div class="player">1. PLE Dylan😉🤙 - 130</div>
+<div class="player">2. ~CBraianj - 119</div>
+<div class="player">3. joaco Farias - 93</div>
+<div class="player">4. PLE Edu - 57</div>
+<div class="player">5. ~Benja🫣 - 51</div>
+<div class="player">6. PLE 🥰🥰bauti - 46</div>
+<div class="player">7. PLE Enzoo - 43</div>
+<div class="player">8. CLT Nacho - 37</div>
+<div class="player">9. ~Luis Carrizo💯 - 31</div>
+<div class="player">10. PLE Lauty B - 29</div>
+<div class="player">11. ~thiago - 28</div>
+<div class="player">12. ~Fran Ibañez - 27</div>
+<div class="player">13. ~Martin 🍺 - 26</div>
+<div class="player">14. Lichu Lafe - 25</div>
+<div class="player">15. ~Beenja - 25</div>
+<div class="player">16. PLE.Mario - 23</div>
+<div class="player">17. PLE ig - 20</div>
+<div class="player">18. PLE Exequiel Leandro Bazan - 18</div>
+<div class="player">19. ~Juann - 16</div>
+<div class="player">20. CLT yoel - 13</div>
+<div class="player">21. PLE Nata - 12</div>
+<div class="player">22. Sss - 12</div>
+<div class="player">23. PLE pablo - 11</div>
+<div class="player">24. ~Rodrigo Javier - 11</div>
+<div class="player">25. CLT lean - 10</div>
+<div class="player">26. PLE Kevin Joel Asman - 10</div>
+<div class="player">27. CLT Lau - 9</div>
+<div class="player">28. PLE Dedo - 9</div>
+<div class="player">29. PLE mario g - 9</div>
+<div class="player">30. ~valenzuela⚽️ - 9</div>
+<div class="player">31. GOLD THE BIGBOSS - 8</div>
+<div class="player">32. PLE Jonasss - 8</div>
+<div class="player">33. PLE Mati - 8</div>
+<div class="player">34. PLE facurizzii🍀 - 7</div>
+<div class="player">35. ~😁 - 7</div>
+<div class="player">36. PLE Ciro Pasqualini - 6</div>
+<div class="player">37. PLE Juan - 6</div>
+<div class="player">38. ~AnaSalas - 6</div>
+<div class="player">39. ~Lucas vizcarra - 6</div>
+<div class="player">40. PLE Sergio - 5</div>
+<div class="player">41. PLE Ángel Canales - 5</div>
+<div class="player">42. GOLD bauti - 4</div>
+<div class="player">43. PLE martaa - 4</div>
+<div class="player">44. ~Bauty - 4</div>
+<div class="player">45. ~Nico - 4</div>
+<div class="player">46. ~elcoco23 - 3</div>
+<div class="player">47. CLT Josecito - 2</div>
+<div class="player">48. PLE A.M - 2</div>
+<div class="player">49. PLE Jere Lagos - 2</div>
+<div class="player">50. PLE emi - 2</div>
+<div class="player">51. ~Brian💰 - 2</div>
+<div class="player">52. ~Juanca - 2</div>
+<div class="player">53. ~Nicolás - 2</div>
+<div class="player">54. CLT El Terre 😎 - 1</div>
+<div class="player">55. PLE Gabriel - 1</div>
+<div class="player">56. PLE Lautyy - 1</div>
+<div class="player">57. PLE Santino - 1</div>
+<div class="player">58. PLE Vivir Solo Cuesta Vida - 1</div>
+<div class="player">59. ~agustin tamburini - 1</div>
+<div class="player">60. ~santii - 1</div>
+
+</div>
+
+<p style="opacity:0.6; margin-top:15px;">⏱ Última actualización: Ahora mismo</p>
+
+</div>
 </div>
